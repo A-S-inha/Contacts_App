@@ -7,30 +7,44 @@
         android:orientation="vertical"
         tools:context=".Add_Data">
         <!--edit text for user name-->
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/name_view"
+             android:layout_margin="8dp"
+             android:text=""
+             />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_view"
+        android:layout_margin="8dp"
+        android:text=""
+        />
         <EditText
-            android:id="@+id/addName"
+            android:id="@+id/addGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="Enter Name"
+            android:hint="Enter Group"
             android:inputType="text" />
 
         <!--edit text for user phone number-->
         <EditText
-            android:id="@+id/addPhoneNumber"
+            android:id="@+id/addCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="Enter Number"
-            android:inputType="phone" />
+            android:hint="Enter City"
+            android:inputType="text" />
 
         <!--edit text for user email-->
         <EditText
-            android:id="@+id/addEmail"
+            android:id="@+id/addCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:hint="Enter Email Address"
+            android:hint="Country"
             android:inputType="text" />
 
         <!--button for saving a new contact-->
@@ -39,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Save Contact"
+            android:text="Save Data"
             android:onClick="adding_data"
             android:textAllCaps="false" />
 

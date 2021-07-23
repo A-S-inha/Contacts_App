@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
                     if (phoneCursor.moveToNext()) {
                         // on below line we are getting the phone number for our users and then adding the name along with phone number in array list.
                         String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                        contactsModalArrayList.add(new ContactsModal(displayName, phoneNumber));
+                        contactsModalArrayList.add(new ContactsModal(displayName, phoneNumber,contactId));
                     }
                     // on below line we are closing our phone cursor.
                     phoneCursor.close();
@@ -265,10 +265,5 @@ public class MainActivity extends AppCompatActivity {
         loadingPB.setVisibility(View.GONE);
         contactRVAdapter.notifyDataSetChanged();
     }
-    public void add_data(View view)
-    {
-        Intent intent = new Intent(this, Add_Data.class);
-        intent.putExtra("Name",contactId);
-        startActivity(intent);
-    }
+
 }

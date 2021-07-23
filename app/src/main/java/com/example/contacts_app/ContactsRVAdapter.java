@@ -73,6 +73,7 @@ class ContactRVAdapter extends RecyclerView.Adapter<ContactRVAdapter.ViewHolder>
                 Intent i = new Intent(context, ContactDetailActivity.class);
                 i.putExtra("name", modal.getUserName());
                 i.putExtra("contact", modal.getContactNumber());
+                i.putExtra("id",modal.getUid());
                 // on below line we are starting a new activity,
                 context.startActivity(i);
             }

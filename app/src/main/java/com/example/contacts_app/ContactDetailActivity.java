@@ -15,7 +15,7 @@ import androidx.core.app.ActivityCompat;
 public class ContactDetailActivity extends AppCompatActivity {
 
     // creating variables for our image view and text view and string. .
-    private String contactName, contactNumber;
+    private String contactName, contactNumber,identity;
     private TextView contactTV, nameTV;
     private ImageView contactIV, callIV, messageIV;
 
@@ -28,6 +28,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         // we passed in our adapter class with intent.
         contactName = getIntent().getStringExtra("name");
         contactNumber = getIntent().getStringExtra("contact");
+        identity=getIntent().getStringExtra("id");
 
         // initializing our views.
         nameTV = findViewById(R.id.idTVName);
@@ -78,5 +79,24 @@ public class ContactDetailActivity extends AppCompatActivity {
         }
         // at last we are starting activity.
         startActivity(callIntent);
+    }
+    public void addData(View view)
+    {
+        Intent i = new Intent(this, Add_Data.class);
+        i.putExtra("name", contactName);
+        i.putExtra("contact", contactNumber);
+        i.putExtra("id",identity);
+        // on below line we are starting a new activity,
+        this.startActivity(i);
+
+    }
+    public void dispData(View view)
+    {
+        Intent i = new Intent(this, ViewIndividual.class);
+
+        i.putExtra("id",identity);
+        // on below line we are starting a new activity,
+        this.startActivity(i);
+
     }
 }
