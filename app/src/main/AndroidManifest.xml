@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Contacts_App">
-        <activity android:name=".ViewIndividual"></activity>
+        <activity android:name=".SearchDB"></activity>
+        <activity android:name=".ViewIndividual" />
         <activity android:name=".Add_Data" />
         <activity android:name=".View_All_Added" />
         <activity android:name=".MainActivity" />

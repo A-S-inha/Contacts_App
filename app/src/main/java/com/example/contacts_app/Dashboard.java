@@ -35,4 +35,10 @@ public class Dashboard extends AppCompatActivity {
         }
         super.onActivityResult(requestCode,resultCode,data);
     }
+    public void view_Mod(View view)
+    {
+        Intent intent = new Intent(this, SearchDB.class);
+        startActivity(intent);
+    }
+
 }
