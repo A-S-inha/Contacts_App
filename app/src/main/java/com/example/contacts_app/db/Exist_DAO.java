@@ -4,6 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -17,5 +18,6 @@ public interface Exist_DAO {
     void insertUser(Exist_User... exist_users);
     @Delete
     void delete(Exist_User exist_user);
+
 
 }
