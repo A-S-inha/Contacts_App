@@ -18,6 +18,10 @@ public interface Exist_DAO {
     void insertUser(Exist_User... exist_users);
     @Delete
     void delete(Exist_User exist_user);
+    @Query("UPDATE Exist_User SET Calls=:price WHERE uid = :id")
+    void update(int price, String id);
+    @Query("SELECT * FROM Exist_User WHERE uid=:giv")
+    Exist_User getUser(String giv);
 
 
 }

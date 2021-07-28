@@ -1,6 +1,7 @@
 package com.example.contacts_app.db;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -9,7 +10,7 @@ public class Exist_User {
     @PrimaryKey()
     @NonNull
     public String uid;
-    @ColumnInfo(name="Name")//City
+    @ColumnInfo(name="Name")//Name
     public String name;
     @ColumnInfo(name="Phone_Number")//City
     public String phone;
@@ -19,6 +20,9 @@ public class Exist_User {
     public String city;
     @ColumnInfo(name="Country")//Country
     public String country;
+    @Nullable
+    @ColumnInfo(name="Calls")
+    public int call;
 
 
 }

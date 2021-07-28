@@ -45,7 +45,7 @@ public class SearchDB extends AppCompatActivity {
     }
     void initRecyclerView()
     {
-        RecyclerView recyclerView =findViewById(R.id.recyclerView);
+        RecyclerView recyclerView =findViewById(R.id.recyclerViews);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration dividerItemDecoration=new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
@@ -66,7 +66,7 @@ public class SearchDB extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // on query submit we are clearing the focus for our search view.
-                searchView.clearFocus();
+              //  searchView.clearFocus();
                 return false;
             }
 

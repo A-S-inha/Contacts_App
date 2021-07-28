@@ -38,6 +38,7 @@ public class Add_Data extends AppCompatActivity {
         String grp = groupEdt.getText().toString();
         String city = cityEdt.getText().toString();
         String country = countryEdt.getText().toString();
+        int c=0;
         AppData db= AppData.getDbInstance(this.getApplicationContext());
         Exist_User exist_user= new Exist_User();
         exist_user.uid=i;
@@ -46,6 +47,7 @@ public class Add_Data extends AppCompatActivity {
         exist_user.group=grp;
         exist_user.city=city;
         exist_user.country=country;
+        exist_user.call=c;
         db.Exist_DAO().insertUser(exist_user);
         Intent i = new Intent(this, ViewIndividual.class);
         i.putExtra("id",i);

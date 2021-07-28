@@ -40,6 +40,7 @@ public class ExistListAdapter extends RecyclerView.Adapter<ExistListAdapter.MYVi
         holder.tv_group.setText(this.exist_users.get(position).group);
         holder.tv_city.setText(this.exist_users.get(position).city);
         holder.tv_country.setText(this.exist_users.get(position).country);
+        holder.tvCall.setText(" "+ this.exist_users.get(position).call);
 
 
     }
@@ -47,8 +48,9 @@ public class ExistListAdapter extends RecyclerView.Adapter<ExistListAdapter.MYVi
     public int getItemCount() {
         return this.exist_users.size();
     }
+
     public class MYViewHolder extends RecyclerView.ViewHolder{
-        TextView tv_name,tv_phone,tv_group,tv_city,tv_country;
+        TextView tv_name,tv_phone,tv_group,tv_city,tv_country,tvCall;
         public MYViewHolder(View view)
         {
             super(view);
@@ -57,6 +59,7 @@ public class ExistListAdapter extends RecyclerView.Adapter<ExistListAdapter.MYVi
             tv_group=view.findViewById(R.id.tvgroup);
             tv_city=view.findViewById(R.id.tvcity);
             tv_country=view.findViewById(R.id.tvcountry);
+            tvCall=view.findViewById(R.id.tvcalls);
 
 
         }

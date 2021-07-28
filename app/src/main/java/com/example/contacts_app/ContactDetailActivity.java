@@ -12,6 +12,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.example.contacts_app.db.AppData;
+import com.example.contacts_app.db.Exist_User;
+
 public class ContactDetailActivity extends AppCompatActivity {
 
     // creating variables for our image view and text view and string. .
@@ -78,6 +81,10 @@ public class ContactDetailActivity extends AppCompatActivity {
             return;
         }
         // at last we are starting activity.
+        AppData db= AppData.getDbInstance(this.getApplicationContext());
+        Exist_User exist_user= db.Exist_DAO().getUser(identity);
+        int cal=exist_user.call+1;
+        db.Exist_DAO().update(cal,identity);
         startActivity(callIntent);
     }
     public void addData(View view)
